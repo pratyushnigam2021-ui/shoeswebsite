@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tread — Everyday sneakers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="shoe" viewBox="0 0 400 200">
+      <path d="M20 140h365v8q0 22-25 22H50q-30 0-30-20z" fill="#f5f5f2"/>
+      <path d="M30 140V95q0-15 20-17l60-8q30-30 65-30l25 20q60 15 130 50 45 10 55 30z" fill="currentColor"/>
+      <path d="M90 134q90-14 180-44" stroke="#fff" stroke-width="10" fill="none" stroke-linecap="round" opacity=".85"/>
+      <path d="M150 52l30 22M170 44l30 22M190 52l28 18" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+      <path d="M30 140h355" stroke="#000" stroke-opacity=".15" stroke-width="3"/>
+    </symbol>
+  </svg>
+
+  <header class="nav">
+    <a class="logo" href="#top">Tread</a>
+    <nav>
+      <a href="#shop">Shop</a>
+      <a href="#about">Why Tread</a>
+      <a href="#join">Join</a>
+    </nav>
+    <button class="cart" id="cartBtn" aria-label="Cart">Cart <span id="cartCount">0</span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Talk it in.<br>Wear it out.</h1>
+        <p>Light, flexible sneakers built for ten-thousand-step days. Pick a colour and see it change.</p>
+        <div class="swatches" role="group" aria-label="Pick a colour">
+          <button class="swatch active" data-name="Signal Orange" data-color="#ff5a1f" data-bg="#ffe3d6" style="--c:#ff5a1f" aria-label="Signal Orange"></button>
+          <button class="swatch" data-name="Lake Blue" data-color="#1f5bff" data-bg="#dbe5ff" style="--c:#1f5bff" aria-label="Lake Blue"></button>
+          <button class="swatch" data-name="Moss" data-color="#2f7d4f" data-bg="#d9efe2" style="--c:#2f7d4f" aria-label="Moss"></button>
+          <button class="swatch" data-name="Plum" data-color="#7a2e7e" data-bg="#f1dcf2" style="--c:#7a2e7e" aria-label="Plum"></button>
+        </div>
+        <a class="btn" href="#shop">Shop sneakers</a>
+      </div>
+      <div class="hero-shoe">
+        <svg viewBox="0 0 400 200" role="img" aria-label="Sneaker"><use href="#shoe"/></svg>
+        <p class="colour-name" id="colourName">Signal Orange</p>
+      </div>
+    </section>
+
+    <section id="shop" class="shop">
+      <div class="shop-head">
+        <h2>The lineup</h2>
+        <div class="filters" role="group" aria-label="Filter shoes">
+          <button class="filter active" data-f="all">All</button>
+          <button class="filter" data-f="run">Running</button>
+          <button class="filter" data-f="street">Street</button>
+          <button class="filter" data-f="trail">Trail</button>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>Made to be worn daily</h2>
+      <ul>
+        <li><strong>Recycled knit uppers.</strong> Each pair keeps 9 plastic bottles out of landfill.</li>
+        <li><strong>Free 30-day trial.</strong> Wear them outside. Return them if they don't fit.</li>
+        <li><strong>Resoling service.</strong> Send them back when the tread wears down.</li>
+      </ul>
+    </section>
+
+    <section id="join" class="join">
+      <h2>Get early access to new colours</h2>
+      <form id="form">
+        <label for="email" class="sr">Email address</label>
+        <input id="email" type="email" placeholder="you@example.com" required>
+        <button class="btn" type="submit">Join the list</button>
+      </form>
+      <p id="msg" role="status"></p>
+    </section>
+  </main>
+
+  <footer>© 2026 Tread. Sample site.</footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
